@@ -238,6 +238,7 @@ img {
 .pain,
 .solution,
 .features,
+.preview,
 .pricing,
 .faq {
   padding: 64px 0;
@@ -417,6 +418,61 @@ img {
   color: var(--text-2);
   font-size: 13.5px;
   line-height: 1.6;
+}
+
+/* Pratonton */
+.preview {
+  border-top: 1px solid var(--border);
+  background: var(--bg-2);
+}
+
+.preview__why {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: var(--text-1);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.preview__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.preview__item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.preview__item img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lift);
+  display: block;
+}
+
+.preview__item figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.preview__item figcaption strong {
+  color: var(--navy);
+  font-size: 14.5px;
+  font-weight: 800;
+}
+
+.preview__item figcaption span {
+  color: var(--text-2);
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 /* Pricing */
@@ -649,6 +705,10 @@ img {
   .pain__grid,
   .feature-grid {
     grid-template-columns: 1fr;
+  }
+
+  .preview__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .solution__row {
