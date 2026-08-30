@@ -169,6 +169,13 @@ img {
   gap: 18px;
 }
 
+.hero__illustration {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 4px;
+}
+
 .eyebrow {
   font-size: 12.5px;
   font-weight: 700;
@@ -341,43 +348,91 @@ img {
   border-top: 1px solid var(--border);
 }
 
-.phase-track {
+.phase-showcase {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
+  gap: 36px;
   margin-bottom: 48px;
 }
 
-.phase-step {
+.phase-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  border-radius: 999px;
+  gap: 40px;
+}
+
+.phase-row--reverse {
+  flex-direction: row-reverse;
+}
+
+.phase-row__media {
+  flex: 0 0 220px;
+}
+
+.phase-row__media img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border);
-  background: var(--bg-1);
+  box-shadow: var(--shadow-card);
+  display: block;
 }
 
-.phase-step__num {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 11.5px;
+.phase-row__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.phase-row--text-only .phase-row__body {
+  padding: 24px 28px;
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border);
+  background: var(--bg-2);
+}
+
+.phase-row__num {
+  display: inline-block;
+  font-size: 12px;
   font-weight: 800;
-  background: var(--navy);
-  color: #ffffff;
-  flex-shrink: 0;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
 }
 
-.phase-step__label {
-  font-size: 13px;
-  font-weight: 700;
+.phase-row__body h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.phase-row__body p {
+  margin: 0;
   color: var(--text-1);
-  white-space: nowrap;
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+@media (max-width: 700px) {
+  .phase-row,
+  .phase-row--reverse {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .phase-row__media {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .phase-row--text-only .phase-row__body {
+    padding: 20px 22px;
+  }
 }
 
 .feature-grid {
