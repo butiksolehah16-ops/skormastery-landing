@@ -1246,9 +1246,24 @@ img {
 
 .price-card__urgency {
   margin: 16px 0 0;
-  font-size: 12.5px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  background: var(--red);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
+}
+
+.price-card__guarantee {
+  margin: 10px 0 0;
+  font-size: 14.5px;
   font-weight: 700;
-  color: var(--red);
+  color: var(--success);
+  background: rgba(47, 111, 79, 0.1);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
 }
 
 .steps {
