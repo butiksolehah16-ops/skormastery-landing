@@ -5,7 +5,7 @@
     if (expiredOfferApplied || !isMathMasteryOfferExpired()) return;
     expiredOfferApplied = true;
     document.querySelectorAll('[data-promo-note]').forEach(note => {
-      note.textContent = 'Tawaran RM39 telah tamat pada 30 September 2026. Hubungi kami untuk semak tawaran terkini. Akses pembelian sedia ada tidak terjejas.';
+      note.textContent = 'Tawaran RM39 telah tamat pada 30 Oktober 2026. Hubungi kami untuk semak tawaran terkini. Akses pembelian sedia ada tidak terjejas.';
     });
     document.querySelectorAll('[data-checkout]').forEach(link => {
       link.href = 'https://wa.me/60139216335';
